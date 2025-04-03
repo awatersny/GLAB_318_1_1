@@ -6,3 +6,7 @@ const server = http.createServer((req, res) => {
   res.setHeader("Content-type", "text/plain")
   res.end("No one expects the spanish inquisition!\n")
 })
+
+server.listen(port, hostname, () => {
+  console.log(`Server is running at http://${hostname}:${port}/`)
+})
