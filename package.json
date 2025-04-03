@@ -1,0 +1,16 @@
+{
+  "name": "glab_318_1_1",
+  "version": "1.0.0",
+  "description": "A sample project demonstrating the functionality of Node and npm.",
+  "license": "ISC",
+  "author": "Andrew Waterman",
+  "type": "commonjs",
+  "main": "lab.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lab.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
