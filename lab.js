@@ -4,7 +4,8 @@ const port = 3000
 const server = http.createServer((req, res) => {
   res.statusCode = 200
   res.setHeader("Content-type", "text/plain")
-  res.end("No one expects the spanish inquisition!\n")
+  res.write("No one expects the spanish inquisition!\n")
+  res.end()
 })
 
 server.listen(port, hostname, () => {
