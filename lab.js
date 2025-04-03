@@ -26,7 +26,31 @@ const sthChars = [
 const server = http.createServer((req, res) => {
   res.statusCode = 200
   res.setHeader("Content-type", "text/plain")
-  res.write(JSON.stringify(sthChars))
+
+  switch(req.url) {
+    case "/":
+      res.write(JSON.stringify(sthChars))
+      break
+    case "/sonic":
+      res.write(JSON.stringify(sthChars[0]))
+      break
+    case "/tails":
+      res.write(JSON.stringify(sthChars[1]))
+      break
+    case "/knuckles":
+      res.write(JSON.stringify(sthChars[2]))
+      break
+    case "/shadow":
+      res.write(JSON.stringify(sthChars[3]))
+      break
+    case "/test":
+      res.write("You've reached the test endpoint.")
+      break;
+    default:
+      res.statusCode = 404;
+      res.write("Error: 404 Not Found")
+      break;
+  }
   res.end()
 })
 
